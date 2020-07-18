@@ -32,6 +32,7 @@
 
 	/**
 	 * Checks if we're allowed to run widget on current device
+	 *
 	 * @return {boolean}
 	 */
 	CiteDrawer.prototype.checkEnabled = function () {
@@ -109,6 +110,7 @@
 
 	/**
 	 * Escapes an id string
+	 *
 	 * @param {string} id
 	 * @return {string}
 	 */
@@ -118,6 +120,7 @@
 
 	/**
 	 * Handles ref click
+	 *
 	 * @param {Event} event
 	 */
 	CiteDrawer.prototype.onCiteClick = function ( event ) {
@@ -133,6 +136,7 @@
 
 	/**
 	 * Exposes class to the outer world
+	 *
 	 * @type {CiteDrawer}
 	 */
 	mw.Citedrawer = CiteDrawer;
