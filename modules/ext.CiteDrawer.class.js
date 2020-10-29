@@ -60,9 +60,11 @@
 			$content = $( '<div>' ),
 			theme = mw.config.get( 'wgCiteDrawerTheme' ) || 'dark';
 
+		// The following classes are used here:
+		// * cite-drawer-wrapper--theme-dark
+		// * cite-drawer-wrapper--theme-light
 		$drawerWrapper
-			.addClass( 'cite-drawer-wrapper' )
-			.addClass( 'cite-drawer-wrapper--theme-' + theme );
+			.addClass( 'cite-drawer-wrapper cite-drawer-wrapper--theme-' + theme );
 
 		$header
 			.addClass( 'drawer-header' )
