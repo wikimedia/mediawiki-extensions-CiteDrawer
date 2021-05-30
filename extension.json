@@ -12,7 +12,7 @@
 	},
 	"type": "other",
 	"AutoloadClasses": {
-		"CiteDrawerHooks": "CiteDrawerHooks.php"
+		"CiteDrawerHooks": "includes/CiteDrawerHooks.php"
 	},
 	"config": {
 		"CiteDrawerEnableDesktop": {
