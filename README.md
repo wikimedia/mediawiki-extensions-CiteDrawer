@@ -6,7 +6,7 @@ introducing a floating drawer displayed at the bottom of the screen when a user 
 
 # Requirements
 
-* MediaWiki 1.29+
+* MediaWiki 1.35+
 * [Cite](https://www.mediawiki.org/wiki/Extension:Cite) extension
 
 # Installation

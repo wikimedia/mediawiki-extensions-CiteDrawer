@@ -1,6 +1,6 @@
 {
 	"name": "CiteDrawer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": [
 		"WikiWorks team"
 	],
@@ -8,7 +8,7 @@
 	"descriptionmsg": "citedrawer-desc",
 	"license-name": "MIT",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"type": "other",
 	"AutoloadClasses": {
