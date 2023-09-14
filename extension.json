@@ -8,11 +8,23 @@
 	"descriptionmsg": "citedrawer-desc",
 	"license-name": "MIT",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.39.0"
 	},
 	"type": "other",
-	"AutoloadClasses": {
-		"CiteDrawerHooks": "includes/CiteDrawerHooks.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extensions\\CiteDrawer\\": "includes/"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extensions\\CiteDrawer\\CiteDrawerHooks",
+			"services": [
+				"ConfigFactory"
+			]
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "main",
+		"MakeGlobalVariablesScript": "main"
 	},
 	"config": {
 		"CiteDrawerEnableDesktop": {
@@ -25,12 +37,11 @@
 			"value": "dark"
 		}
 	},
+	"ConfigRegistry": {
+		"CiteDrawer": "GlobalVarConfig::newInstance"
+	},
 	"ExtensionMessagesFiles": {
 		"CiteDrawerAlias": "CiteDrawer.i18n.alias.php"
-	},
-	"Hooks": {
-		"BeforePageDisplay": "CiteDrawerHooks::onBeforePageDisplay",
-		"MakeGlobalVariablesScript": "CiteDrawerHooks::onMakeGlobalVariablesScript"
 	},
 	"MessagesDirs": {
 		"CiteDrawer": [
