@@ -36,7 +36,7 @@
 	 * @return {boolean}
 	 */
 	CiteDrawer.prototype.checkEnabled = function () {
-		var wgCiteDrawerEnableDesktop = mw.config.get( 'wgCiteDrawerEnableDesktop' ) || false,
+		const wgCiteDrawerEnableDesktop = mw.config.get( 'wgCiteDrawerEnableDesktop' ) || false,
 			wgCiteDrawerEnableMobile = mw.config.get( 'wgCiteDrawerEnableMobile' ) || false;
 
 		if ( isMobile() && wgCiteDrawerEnableMobile ) {
@@ -52,7 +52,7 @@
 	 * Builds widget markup and adds it into DOM
 	 */
 	CiteDrawer.prototype.addMarkup = function () {
-		var self = this,
+		const self = this,
 			$drawerWrapper = $( '<div>' ),
 			$drawer = $( '<div>' ),
 			$header = $( '<div>' ),
@@ -88,7 +88,7 @@
 
 		$close.on( 'click', this.closeDrawer.bind( this ) );
 
-		$drawerWrapper.on( 'click', function ( event ) {
+		$drawerWrapper.on( 'click', ( event ) => {
 			if ( event.target ) {
 				self.closeDrawer( event );
 			}
@@ -126,7 +126,7 @@
 	 * @param {Event} event
 	 */
 	CiteDrawer.prototype.onCiteClick = function ( event ) {
-		var target = $( event.target ).attr( 'href' ),
+		const target = $( event.target ).attr( 'href' ),
 			$referenceItem = this.$references.find( this.escapeID( target ) ),
 			referenceHtml = $referenceItem.find( '.reference-text' ).html();
 

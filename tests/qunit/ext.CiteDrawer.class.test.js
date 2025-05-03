@@ -7,19 +7,19 @@
 		}
 	} ) );
 
-	QUnit.test( 'Class is available within mw context', function ( assert ) {
+	QUnit.test( 'Class is available within mw context', ( assert ) => {
 		assert.strictEqual( typeof mw.Citedrawer, 'function' );
 	} );
 
 	QUnit.test( 'escapeID escapes ids correctly', function ( assert ) {
-		var id = 'some.thing-:123::[data-test]', escaped;
+		let id = 'some.thing-:123::[data-test]', escaped;
 		escaped = mw.Citedrawer.prototype.escapeID.call( this, id );
 		assert.strictEqual( escaped, 'some\\.thing-\\:123\\:\\:\\[data-test\\]' );
 	} );
 
 	// TODO: I bet this one needs to be reworked
-	QUnit.test( 'Drawer runs correctly', function ( assert ) {
-		var $cites,
+	QUnit.test( 'Drawer runs correctly', ( assert ) => {
+		let $cites,
 			$container = $( '<div>' ),
 			$references = $( '<div>' ).addClass( 'references' ),
 			i;

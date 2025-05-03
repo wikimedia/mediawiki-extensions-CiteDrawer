@@ -1,6 +1,6 @@
-$( function () {
+$( () => {
 
-	var $references = $( '#mw-content-text .references', document.body ),
+	const $references = $( '#mw-content-text .references', document.body ),
 		$cites = $( '#mw-content-text .reference', document.body );
 
 	if ( $references.length && $cites.length ) {
