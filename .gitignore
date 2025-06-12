@@ -3,3 +3,4 @@
 /composer.lock
 /.eslintcache
 /vendor/
+/.stylelintcache
