@@ -8,7 +8,7 @@
 	"descriptionmsg": "citedrawer-desc",
 	"license-name": "MIT",
 	"requires": {
-		"MediaWiki": ">= 1.39.0"
+		"MediaWiki": ">= 1.41.0"
 	},
 	"type": "other",
 	"AutoloadNamespaces": {
@@ -38,7 +38,7 @@
 		}
 	},
 	"ConfigRegistry": {
-		"CiteDrawer": "GlobalVarConfig::newInstance"
+		"CiteDrawer": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"ExtensionMessagesFiles": {
 		"CiteDrawerAlias": "CiteDrawer.i18n.alias.php"
